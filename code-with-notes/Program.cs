@@ -5,9 +5,14 @@ partial class Program
 {
   static void Main() 
   {
+    //Give the user four chances to guess the number.
+    int attempts = 4;
 
     //Display a message asking the user to guess the number
     Console.WriteLine("Can you guess the secret number???");
+
+    //Loop continues until all 4 attempts are use. Program is exited after 4th guess 
+    for (int i = 0; i < attempts; i++) {
 
     //Display a prompt for the user's guess
     Console.Write("Enter your guess here:");
@@ -28,9 +33,10 @@ partial class Program
     //Compare the user's guess with the secret number. Display a success message if the guess is correct, otherwise display a failure message
   if (Guess == secretNumber) {
 
-    Console.Write("How did you know?!? Do you peek at my cheat sheet?");
+    Console.WriteLine("How did you know?!? Do you peek at my cheat sheet?");
   } else {
-    Console.Write("Wow! You guessed... oh... So close!");
+    Console.WriteLine("Wow! You guessed... oh... So close! Try again?");
   }
+}
 }
 }
